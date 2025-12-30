@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATONE Chapel International</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #2c3e50, #4a148c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .scripture {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2em;
+      font-style: italic;
+      color: #ffd700;
+      animation: fadeSlide 12s infinite;
+    }
+    @keyframes fadeSlide {
+      0% {opacity:0; transform: translateY(20px);} 
+      10% {opacity:1; transform: translateY(0);} 
+      80% {opacity:1;} 
+      100% {opacity:0; transform: translateY(-20px);} 
+    }
+    nav {
+      background: #1a1a1a;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
+    nav a:hover { color:#d4af37; }
+    section { padding:60px 20px; max-width:1000px; margin:auto; }
+    .card {
+      background:#fff; padding:30px; border-radius:12px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1); margin-bottom:30px;
+    }
+    .gallery img {
+      width:100%; max-width:300px; border-radius:10px; margin:10px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 50%;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    footer { background:#1a1a1a; color:#fff; text-align:center; padding:30px 20px; }
+    .highlight { color:#d4af37; font-weight:bold; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ATONE CHAPEL INTERNATIONAL</h1>
+    <p>Raising a People of Power, Purity & Purpose</p>
+    <p><span class="highlight">Head Pastor:</span> Prophet Joseph Adarkwah</p>
+    <div class="scripture">“For the Lord God is a sun and shield.” – Psalm 84:11</div>
+    <audio autoplay loop hidden>
+      <source src="worship.mp3" type="audio/mpeg">
+    </audio>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#vision">Vision</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <div class="card">
+      <h2>Church Service Times</h2>
+      <p><strong>Sunday Prophetic Service:</strong> 8:00 AM – 11:30 AM</p>
+      <p><strong>Midweek Teaching & Prayer:</strong> Wednesday – 6:00 PM</p>
+      <p><strong>All-Night / Special Services:</strong> As announced</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="card">
+      <h2>About ATONE Chapel International</h2>
+      <p>
+        ATONE Chapel International is a Christ-centered prophetic ministry committed to
+        transforming lives through the Word of God, prayer, worship, and the power of
+        the Holy Spirit. We believe in salvation, restoration, deliverance, and the
+        manifestation of God's glory in every believer.
+      </p>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="card">
+      <h2>Our Vision & Mission</h2>
+      <p>
+        <strong>Vision:</strong> To raise a holy and empowered people who walk in dominion,
+        purpose, and intimacy with God.
+      </p>
+      <p>
+        <strong>Mission:</strong> To preach the gospel of Jesus Christ with power,
+        equip believers for kingdom service, and impact nations through prophetic
+        ministry and love.
+      </p>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="card">
+      <h2>Church Location</h2>
+      <p>
+        <strong>Address:</strong> Potsin, Shalom Estate<br />
+        Central Region, Ghana
+      </p>
+      <p>
+        You are warmly invited to worship with us and experience God's presence.
+      </p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="card">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Church Service">
+        <img src="photo2.jpg" alt="Worship">
+        <img src="photo3.jpg" alt="Prophetic Moment">
+      </div>
+      <p><em>Replace photo1.jpg etc. with real church photos.</em></p>
+    </div>
+  </section>
+
+  <section id="media">
+    <div class="card">
+      <h2>Live Streams & Sermons</h2>
+      <p>YouTube • Facebook • TikTok – <strong>PROPHET JOSEPH ADARKWAH</strong></p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed?listType=user_uploads&list=PROPHETJOSEPHADARKWAH"></iframe>
+      <p><em>Facebook & TikTok live links can be added when streaming.</em></p>
+    </div>
+  </section>
+
+  <section id="donation">
+    <div class="card">
+      <h2>Online Giving & Donations</h2>
+      <p>Support the work of God through your generous giving.</p>
+      <p><strong>Mobile Money:</strong> +233 244 767 702</p>
+      <p><em>“Give, and it shall be given unto you” – Luke 6:38</em></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> +233 244 767 702</p>
+      <p><a href="https://wa.me/233244767702" target="_blank">Chat with us on WhatsApp</a></p>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="card">
+      <h2>Find Us</h2>
+      <iframe src="https://www.google.com/maps?q=Potsin,Shalom%20Estate&output=embed" width="100%" height="300" style="border:0;"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ATONE Chapel International</p>
+    <p>Head Pastor: Prophet Joseph Adarkwah</p>
+    <p>Potsin, Shalom Estate</p>
+      <p class="highlight">“Arise, shine; for thy light is come.” – Isaiah 60:1</p>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/233244767702" target="_blank">💬</a>
+</body>
+</html>
