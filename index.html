@@ -10,8 +10,8 @@
 
   <style>
     :root {
-      --primary: #0a1f3a;      /* deep navy */
-      --gold: #c9a23f;         /* rich gold */
+      --primary: #0a1f3a;
+      --gold: #c9a23f;
       --gold-light: #e8c97f;
       --bg: #f8f9fc;
       --text: #1e293b;
@@ -20,11 +20,7 @@
       --shadow: 0 10px 30px rgba(10, 31, 58, 0.08);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
@@ -33,9 +29,7 @@
       line-height: 1.7;
     }
 
-    /* Header Hero */
     header {
-      position: relative;
       background: linear-gradient(rgba(10, 31, 58, 0.78), rgba(10, 31, 58, 0.88)),
                   url('banner.jpg') center/cover no-repeat;
       color: white;
@@ -71,7 +65,6 @@
       font-weight: 300;
     }
 
-    /* Sticky Navigation */
     nav {
       position: sticky;
       top: 0;
@@ -86,26 +79,16 @@
       color: white;
       text-decoration: none;
       font-weight: 500;
-      margin: 0 24px;
+      margin: 0 20px;
       font-size: 1.05rem;
       transition: color 0.3s ease;
     }
 
-    nav a:hover,
-    nav a.active {
-      color: var(--gold);
-    }
+    nav a:hover, nav a.active { color: var(--gold); }
 
-    /* Main Content */
-    main {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    main { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
 
-    section {
-      padding: 100px 0;
-    }
+    section { padding: 100px 0; }
 
     h2 {
       font-family: 'Playfair Display', serif;
@@ -123,7 +106,6 @@
       border-radius: 2px;
     }
 
-    /* Event Card */
     .event-card {
       background: white;
       border-radius: 16px;
@@ -134,24 +116,12 @@
       border-left: 6px solid var(--gold);
     }
 
-    .event-card h3 {
-      color: var(--primary);
-      font-size: 2.1rem;
-      margin-bottom: 24px;
-    }
+    .event-card h3 { color: var(--primary); font-size: 2.1rem; margin-bottom: 24px; }
 
-    .event-card p {
-      font-size: 1.15rem;
-      color: var(--text-light);
-      margin: 12px 0;
-    }
+    .event-card p { font-size: 1.15rem; color: var(--text-light); margin: 12px 0; }
 
-    .event-card strong {
-      color: var(--primary);
-      font-weight: 600;
-    }
+    .event-card strong { color: var(--primary); font-weight: 600; }
 
-    /* Cards Grid */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -173,29 +143,18 @@
       box-shadow: 0 20px 40px rgba(10, 31, 58, 0.12);
     }
 
-    .feature-card h3 {
-      color: var(--primary);
-      font-size: 1.55rem;
-      margin-bottom: 16px;
-    }
+    .feature-card h3 { color: var(--primary); font-size: 1.55rem; margin-bottom: 16px; }
 
-    .feature-card p {
-      color: var(--text-light);
-    }
+    .feature-card p { color: var(--text-light); }
 
-    /* CTA */
     .cta {
       background: var(--primary);
       color: white;
       text-align: center;
       padding: 100px 20px;
-      border-radius: 0;
     }
 
-    .cta h2 {
-      color: white;
-      margin-bottom: 24px;
-    }
+    .cta h2 { color: white; margin-bottom: 24px; }
 
     .cta .btn {
       display: inline-block;
@@ -215,7 +174,40 @@
       box-shadow: 0 16px 35px rgba(201, 162, 63, 0.45);
     }
 
-    /* Floating WhatsApp */
+    .article-section {
+      background: white;
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      margin: 0 auto 80px;
+    }
+
+    .article-section h3 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .article-section .date {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .archived-message {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 1.15rem;
+    }
+
+    .archived-message a {
+      color: var(--gold);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
     .whatsapp-float {
       position: fixed;
       bottom: 30px;
@@ -240,7 +232,6 @@
       box-shadow: 0 12px 35px rgba(0,0,0,0.3);
     }
 
-    /* Footer */
     footer {
       background: #0a0f1a;
       color: #94a3b8;
@@ -249,15 +240,13 @@
       font-size: 0.95rem;
     }
 
-    footer p {
-      margin: 12px 0;
-    }
+    footer p { margin: 12px 0; }
 
     @media (max-width: 768px) {
       header { padding: 120px 20px 80px; }
       header h1 { font-size: 3rem; }
       h2 { font-size: 2.4rem; }
-      .event-card { padding: 32px; }
+      .event-card, .article-section { padding: 32px; }
       nav a { margin: 0 14px; font-size: 0.95rem; }
     }
   </style>
@@ -275,6 +264,7 @@
   <a href="about.html">About Us</a>
   <a href="school.html">Bible School</a>
   <a href="give.html">Give</a>
+  <a href="articles-history.html">Articles History</a>
 </nav>
 
 <main>
@@ -296,13 +286,55 @@
     <p style="max-width:760px; margin:0 auto; font-size:1.18rem; color:var(--text-light);">
       A prophetic community raised to demonstrate the power of atonement, intercession, 
       and accurate prophetic ministry in this generation.
+    </p>
+  </section>
 
-
+  <!-- About Us Section -->
   <section>
-    <h2>DAILY ARTICLE</h2>
+    <h2>About Us</h2>
     <div class="divider"></div>
-    <p style="max-width:760px; margin:0 auto; font-size:1.18rem; color:var(--text-light);">
-In the New Covenant era, God’s call is not limited to prophets in the Old Testament sense. Through the Holy Spirit, every believer hears the upward call in Christ Jesus (Philippians 3:14). Yet the initial call—the sound from above—is to salvation: “Come to me, all you who are weary and burdened, and I will give you rest” (Matthew 11:28, NIV).  
+    
+    <div style="max-width: 900px; margin: 0 auto 60px; text-align: left;">
+      <p style="font-size: 1.18rem; color: var(--text-light); margin-bottom: 32px;">
+        Atone Chapel is a prophetic ministry founded under the divine mandate to raise a generation that walks in dominion power through the mystery of atonement, fervent prayer, and accurate prophetic revelation.
+      </p>
+      
+      <p style="font-size: 1.18rem; color: var(--text-light); margin-bottom: 32px;">
+        We are a covenant community where lives are transformed by the blood of Jesus Christ, deep worship, prophetic accuracy, and the uncompromising teaching of the Word of God.
+      </p>
+    </div>
+
+    <div class="features">
+      <div class="feature-card">
+        <h3>Our Vision</h3>
+        <p>To establish a living covenant altar where believers encounter true atonement, receive redemption, and are empowered to exercise dominion in every sphere of life.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Our Mission</h3>
+        <p>
+          • Preach the full gospel of atonement and reconciliation through Christ<br>
+          • Raise prophetic voices and intercessors for the end-time harvest<br>
+          • Equip believers with deep revelatory knowledge of Scripture<br>
+          • Demonstrate the tangible power of God through signs, wonders, and deliverance
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Our Leader</h3>
+        <p><strong>Prophet Joseph Adarkwah</strong> carries a strong prophetic and apostolic anointing. His ministry is marked by precision, compassion, spiritual authority, and a burning passion for souls and kingdom advancement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Article Section (auto-archives after 24h) -->
+  <section id="daily-article" class="article-section">
+    <h2>Daily Article</h2>
+    <div class="divider"></div>
+    <div class="date" id="article-date">Published: Loading...</div>
+    <h3 id="article-title">The Upward Call in the New Covenant</h3>
+    <p style="font-size:1.15rem; color:var(--text-light);">
+      In the New Covenant era, God’s call is not limited to prophets in the Old Testament sense. Through the Holy Spirit, every believer hears the upward call in Christ Jesus (Philippians 3:14). Yet the initial call—the sound from above—is to salvation: “Come to me, all you who are weary and burdened, and I will give you rest” (Matthew 11:28, NIV).  
     </p>
   </section>
 
@@ -344,6 +376,40 @@ In the New Covenant era, God’s call is not limited to prophets in the Old Test
   <p>© 2026 Atone Chapel. All Rights Reserved.</p>
   <p>Shalom Estate, Potsin | +233 244 491 177</p>
 </footer>
+
+<script>
+// Article auto-archive simulation (client-side - after 24 hours)
+const ARTICLE_KEY = 'dailyArticleContent';
+const ARTICLE_TIMESTAMP_KEY = 'articlePublishTime';
+
+function checkAndArchiveArticle() {
+  const now = Date.now();
+  const savedTime = localStorage.getItem(ARTICLE_TIMESTAMP_KEY);
+
+  // If no timestamp or older than 24 hours → archive (hide content)
+  if (!savedTime || (now - parseInt(savedTime) > 24 * 60 * 60 * 1000)) {
+    document.getElementById('daily-article').innerHTML = `
+      <h2>Daily Article</h2>
+      <div class="divider"></div>
+      <p class="archived-message">
+        Today's article has been moved to the archive.<br>
+        <a href="articles-history.html">View Articles History →</a>
+      </p>
+    `;
+    // Optionally reset timestamp for next day (or leave it - depends on your preference)
+    // localStorage.setItem(ARTICLE_TIMESTAMP_KEY, now);
+  } else {
+    // Show date
+    const publishDate = new Date(parseInt(savedTime)).toLocaleDateString('en-GB', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+    document.getElementById('article-date').textContent = `Published: ${publishDate}`;
+  }
+}
+
+// Run check when page loads
+window.addEventListener('load', checkAndArchiveArticle);
+</script>
 
 </body>
 </html>
