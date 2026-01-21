@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atone Chapel | Covenant Altar of Power</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0a1f3a;      /* deep navy */
+      --gold: #c9a23f;         /* rich gold */
+      --gold-light: #e8c97f;
+      --bg: #f8f9fc;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(10, 31, 58, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Header Hero */
+    header {
+      position: relative;
+      background: linear-gradient(rgba(10, 31, 58, 0.78), rgba(10, 31, 58, 0.88)),
+                  url('banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 160px 20px 120px;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header .logo {
+      width: 100px;
+      height: auto;
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 8vw, 4.8rem);
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 720px;
+      margin: 0 auto;
+      opacity: 0.95;
+      font-weight: 300;
+    }
+
+    /* Sticky Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 31, 58, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 18px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 24px;
+      font-size: 1.05rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      width: 90px;
+      height: 4px;
+      background: var(--gold);
+      margin: 0 auto 48px;
+      border-radius: 2px;
+    }
+
+    /* Event Card */
+    .event-card {
+      background: white;
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      margin: 0 auto 80px;
+      border-left: 6px solid var(--gold);
+    }
+
+    .event-card h3 {
+      color: var(--primary);
+      font-size: 2.1rem;
+      margin-bottom: 24px;
+    }
+
+    .event-card p {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      margin: 12px 0;
+    }
+
+    .event-card strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Cards Grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(10, 31, 58, 0.12);
+    }
+
+    .feature-card h3 {
+      color: var(--primary);
+      font-size: 1.55rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card p {
+      color: var(--text-light);
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 0;
+    }
+
+    .cta h2 {
+      color: white;
+      margin-bottom: 24px;
+    }
+
+    .cta .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #0a1f3a;
+      font-weight: 600;
+      padding: 16px 48px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.15rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(201, 162, 63, 0.35);
+    }
+
+    .cta .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(201, 162, 63, 0.45);
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 70px;
+      height: 70px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      z-index: 9999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.15);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      background: #0a0f1a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 60px 20px 40px;
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin: 12px 0;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 120px 20px 80px; }
+      header h1 { font-size: 3rem; }
+      h2 { font-size: 2.4rem; }
+      .event-card { padding: 32px; }
+      nav a { margin: 0 14px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.jpg" alt="Atone Chapel Logo" class="logo">
+  <h1>Atone Chapel</h1>
+  <p>A Covenant Altar of Power, Atonement & Prophetic Authority</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="school.html">Bible School</a>
+  <a href="give.html">Give</a>
+</nav>
+
+<main>
+
+  <section class="event-card">
+    <h3>Current Program</h3>
+    <div class="divider"></div>
+    <p><strong>21 Days Fasting & Prayers</strong></p>
+    <p><strong>Theme:</strong> Dominion Power (Psalm 89:20–23)</p>
+    <p><strong>Date:</strong> 12th January – 1st February 2026</p>
+    <p><strong>Time:</strong> 6:30pm – 8:30pm Daily</p>
+    <p><strong>Venue:</strong> Shalom Estate, Potsin (off Winneba – Kasoa Highway)</p>
+    <p><strong>Host:</strong> Prophet Joseph Adarkwah</p>
+  </section>
+
+  <section>
+    <h2>Welcome to Atone Chapel</h2>
+    <div class="divider"></div>
+    <p style="max-width:760px; margin:0 auto; font-size:1.18rem; color:var(--text-light);">
+      A prophetic community raised to demonstrate the power of atonement, intercession, 
+      and accurate prophetic ministry in this generation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Our Mandate</h2>
+    <div class="divider"></div>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Prayer & Intercession</h3>
+        <p>Building spiritual altars that enforce divine verdicts and shift atmospheres.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Prophetic Ministry</h3>
+        <p>Releasing timely, accurate words that bring clarity, healing and direction.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Teaching & Discipleship</h3>
+        <p>Imparting sound doctrine that produces mature, kingdom-impact believers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Join Us Live</h2>
+    <p>Daily online prayer – 4:00 AM Ghana Time</p>
+    <a href="https://wa.me/233244491177" class="btn">Connect on WhatsApp</a>
+  </section>
+
+</main>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/233244491177" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+    <path d="M12 2C6.48 2 2 6.48 2 12c0 2.14.7 4.11 1.88 5.71L2 22l4.29-1.88C7.89 21.3 9.86 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm3.78 14.38c-.25.7-.73 1.27-1.4 1.41-.67.14-1.4.21-2.38-.38-.98-.59-1.6-1.96-2.08-2.93-.48-.97-.64-1.81-.14-2.5.5-.69 1.51-.88 2.01-.88.5 0 1 .25 1.32.75.32.5.43 1.07.32 1.62-.11.55-.47.98-.97 1.25z"/>
+  </svg>
+</a>
+
+<footer>
+  <p>© 2026 Atone Chapel. All Rights Reserved.</p>
+  <p>Shalom Estate, Potsin | +233 244 491 177</p>
+</footer>
+
+</body>
+</html>
