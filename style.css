@@ -1,245 +1,374 @@
-/* style.css - Atone Chapel | Modern & Professional */
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* ==========================================================================
+   style.css – Atone Chapel Website
+   ========================================================================== */
 
 :root {
-    --primary: #0a1f3a;         /* Deep navy - main brand color */
-    --gold: #c9a23f;            /* Rich elegant gold */
-    --gold-light: #e8c97f;
-    --bg: #f8f9fc;              /* Very light gray-blue */
-    --text: #1e293b;
-    --text-light: #64748b;
-    --white: #ffffff;
-    --shadow: 0 10px 30px rgba(10, 31, 58, 0.08);
-    --shadow-lg: 0 20px 40px rgba(10, 31, 58, 0.12);
+  --primary:       #0a1f3a;
+  --gold:          #c9a23f;
+  --gold-light:    #e8c97f;
+  --bg:            #f7f7f9;           /* main light background */
+  --card-bg:       #fdfdfe;           /* cards & sections */
+  --border-light:  #e5e7eb;
+  --text:          #1e293b;
+  --text-light:    #64748b;
+  --white:         #ffffff;
+
+  --shadow:        0 10px 30px rgba(10, 31, 58, 0.07);
+  --shadow-sm:     0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
 }
 
-/* Header - Hero Section */
+/* ==========================================================================
+   Header (Hero)
+   ========================================================================== */
 header {
-    position: relative;
-    background: linear-gradient(rgba(10, 31, 58, 0.78), rgba(10, 31, 58, 0.88)),
-                url('banner.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 160px 20px 120px;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background: linear-gradient(rgba(10, 31, 58, 0.78), rgba(10, 31, 58, 0.88)),
+              url('banner.jpg') center / cover no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 160px 20px 120px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.logo {
-    width: 110px;
-    height: auto;
-    margin: 0 auto 28px;
-    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.5));
+header .logo {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 24px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 8vw, 4.8rem);
-    font-weight: 700;
-    color: var(--gold);
-    margin-bottom: 16px;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 8vw, 4.8rem);
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
 header p {
-    font-size: 1.35rem;
-    max-width: 760px;
-    margin: 0 auto;
-    opacity: 0.92;
-    font-weight: 300;
+  font-size: 1.3rem;
+  max-width: 720px;
+  margin: 0 auto;
+  opacity: 0.95;
+  font-weight: 300;
 }
 
-/* Sticky Navigation */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(10, 31, 58, 0.96);
-    backdrop-filter: blur(12px);
-    padding: 18px 0;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  background: var(--primary);
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 24px;
-    font-size: 1.05rem;
-    transition: color 0.3s ease;
+.navbar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-nav a:hover,
-nav a.active {
-    color: var(--gold);
+.navbar .menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: var(--white);
+  margin: 4px 0;
+  transition: all 0.3s ease;
 }
 
-/* Main Content */
+.navbar .nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar .nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a:focus {
+  color: var(--gold);
+}
+
+/* ==========================================================================
+   Main Layout
+   ========================================================================== */
 main {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 section {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: var(--primary);
-    text-align: center;
-    margin-bottom: 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .divider {
-    width: 90px;
-    height: 4px;
-    background: var(--gold);
-    margin: 0 auto 48px;
-    border-radius: 2px;
+  width: 90px;
+  height: 4px;
+  background: var(--gold);
+  margin: 0 auto 48px;
+  border-radius: 2px;
 }
 
-/* Bible Verses / Quote Cards */
-.verse {
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    border-left: 6px solid var(--gold);
-    box-shadow: var(--shadow);
-    font-style: italic;
-    font-size: 1.32rem;
-    color: var(--text-light);
-    max-width: 920px;
-    margin: 40px auto;
+/* ==========================================================================
+   Cards & Sections
+   ========================================================================== */
+.event-card,
+.article-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: var(--shadow);
+  max-width: 900px;
+  margin: 0 auto 80px;
+  border: 1px solid var(--border-light);
 }
 
-.verse cite {
-    display: block;
-    margin-top: 20px;
-    font-weight: 600;
-    color: var(--primary);
-    font-style: normal;
-    font-size: 1.1rem;
+.event-card {
+  border-left: 6px solid var(--gold);
 }
 
-/* Media & Buttons */
-.media audio {
-    width: 90%;
-    max-width: 700px;
-    margin: 30px auto;
-    display: block;
+.event-card h3,
+.article-section h3 {
+  color: var(--primary);
+  font-size: 2.1rem;
+  margin-bottom: 24px;
 }
 
-.youtube-btn,
-.radio-btn {
-    display: inline-block;
-    background: var(--primary);
-    color: white;
-    padding: 16px 40px;
-    margin: 24px 12px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.15rem;
-    font-weight: 600;
-    transition: all 0.35s ease;
-    box-shadow: 0 8px 24px rgba(10, 31, 58, 0.25);
+.event-card p,
+.article-section p {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  margin: 12px 0;
 }
 
-.youtube-btn:hover,
-.radio-btn:hover {
-    background: var(--gold);
-    color: var(--primary);
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(201, 162, 63, 0.35);
+.event-card strong {
+  color: var(--primary);
+  font-weight: 600;
 }
 
-/* Floating WhatsApp Button */
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(10, 31, 58, 0.11);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  font-size: 1.55rem;
+  margin-bottom: 16px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+}
+
+/* ==========================================================================
+   Radio Section
+   ========================================================================== */
+.radio-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.radio-wrapper iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.radio-credit {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.radio-credit a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.radio-credit a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Call to Action
+   ========================================================================== */
+.cta {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cta h2 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.cta .btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--primary);
+  font-weight: 600;
+  padding: 16px 48px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(201, 162, 63, 0.35);
+}
+
+.cta .btn:hover,
+.cta .btn:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(201, 162, 63, 0.45);
+}
+
+/* ==========================================================================
+   Floating WhatsApp Button
+   ========================================================================== */
 .whatsapp-float {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    width: 72px;
-    height: 72px;
-    background: #25D366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 38px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
-    z-index: 9999;
-    transition: all 0.3s ease;
-    text-decoration: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.15) translateY(-4px);
-    box-shadow: 0 16px 40px rgba(37, 211, 102, 0.4);
+  transform: scale(1.15);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3);
 }
 
-/* Footer */
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 footer {
-    background: #0a0f1a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 70px 20px 50px;
-    font-size: 0.98rem;
+  background: #0a0f1a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 60px 20px 40px;
+  font-size: 0.95rem;
 }
 
 footer p {
-    margin: 12px 0;
+  margin: 12px 0;
 }
 
-/* Responsive */
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
 @media (max-width: 768px) {
-    header {
-        padding: 120px 20px 80px;
-    }
-    header h1 {
-        font-size: 3.2rem;
-    }
-    header p {
-        font-size: 1.15rem;
-    }
-    nav a {
-        margin: 0 14px;
-        font-size: 0.98rem;
-    }
-    h2 {
-        font-size: 2.4rem;
-    }
-    .verse {
-        padding: 32px;
-        font-size: 1.2rem;
-    }
-    .youtube-btn, .radio-btn {
-        padding: 14px 32px;
-        font-size: 1.05rem;
-    }
-    .whatsapp-float {
-        width: 64px;
-        height: 64px;
-        font-size: 34px;
-        bottom: 24px;
-        right: 24px;
-    }
+  header {
+    padding: 120px 20px 80px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .event-card,
+  .article-section {
+    padding: 32px;
+  }
+
+  .navbar .menu-toggle {
+    display: flex;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary);
+    padding: 20px;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+
+  .navbar .nav-links a {
+    margin: 12px 0;
+    text-align: center;
+  }
 }
