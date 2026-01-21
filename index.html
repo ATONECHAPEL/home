@@ -293,7 +293,6 @@
   <section id="daily-article" class="article-section">
     <h2>Daily Article</h2>
     <div class="divider"></div>
-    <div class="date" id="article-date">Published: Loading...</div>
     <h3 id="article-title">The Upward Call in the New Covenant</h3>
     <p style="font-size:1.15rem; color:var(--text-light);">
       In the New Covenant era, God’s call is not limited to prophets in the Old Testament sense. Through the Holy Spirit, every believer hears the upward call in Christ Jesus (Philippians 3:14). Yet the initial call—the sound from above—is to salvation: “Come to me, all you who are weary and burdened, and I will give you rest” (Matthew 11:28, NIV).  
@@ -378,25 +377,8 @@
   <p>Shalom Estate, Potsin | +233 244 491 177</p>
 </footer>
 
-<script>
-// Article auto-archive simulation (client-side - after 24 hours)
-const ARTICLE_KEY = 'dailyArticleContent';
-const ARTICLE_TIMESTAMP_KEY = 'articlePublishTime';
 
-function checkAndArchiveArticle() {
-  const now = Date.now();
-  const savedTime = localStorage.getItem(ARTICLE_TIMESTAMP_KEY);
-
-  // If no timestamp or older than 24 hours → archive (hide content)
-  if (!savedTime || (now - parseInt(savedTime) > 24 * 60 * 60 * 1000)) {
-    document.getElementById('daily-article').innerHTML = `
-      <h2>Daily Article</h2>
-      <div class="divider"></div>
-      <p class="archived-message">
-        Today's article has been moved to the archive.<br>
-        <a href="articles-history.html">View Articles History →</a>
-      </p>
-    `;
+    
     // Optionally reset timestamp for next day (or leave it - depends on your preference)
     // localStorage.setItem(ARTICLE_TIMESTAMP_KEY, now);
   } else {
