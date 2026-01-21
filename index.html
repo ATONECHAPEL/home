@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atone Chapel: A Covenant Altar of Power, Atonement & Prophetic Authority. Join our prophetic community for transformation through prayer, worship, and the Word of God.">
+  <meta name="keywords" content="Atone Chapel, Prophet Joseph Adarkwah, prophetic ministry, atonement, intercession, Bible school, Christian church, Ghana">
   <title>Atone Chapel | Covenant Altar of Power</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
+  <!-- Inline Styles -->
   <style>
     :root {
       --primary: #0a1f3a;
-      --gold:   #c9a23f;
+      --gold: #c9a23f;
       --gold-light: #e8c97f;
-      --bg:     #f7f7f9;           /* ← main light grey background */
-      --card-bg: #fdfdfe;          /* slightly off-white/light grey for cards */
+      --bg: #f7f7f9; /* Main light grey background */
+      --card-bg: #fdfdfe; /* Slightly off-white/light grey for cards */
       --border-light: #e5e7eb;
-      --text:   #1e293b;
+      --text: #1e293b;
       --text-light: #64748b;
-      --white:  #ffffff;
+      --white: #ffffff;
       --shadow: 0 10px 30px rgba(10, 31, 58, 0.07);
       --shadow-sm: 0 4px 12px rgba(0,0,0,0.06);
     }
@@ -37,10 +41,11 @@
       min-height: 100vh;
     }
 
+    /* Header Styles */
     header {
       background: linear-gradient(rgba(10, 31, 58, 0.78), rgba(10, 31, 58, 0.88)),
                   url('banner.jpg') center/cover no-repeat;
-      color: white;
+      color: var(--white);
       text-align: center;
       padding: 160px 20px 120px;
       min-height: 60vh;
@@ -73,29 +78,76 @@
       font-weight: 300;
     }
 
-    nav {
+    /* Navigation Styles */
+    .navbar {
+      background: var(--primary);
+      padding: 16px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(10, 31, 58, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 18px 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav a {
-      color: white;
+    .navbar .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .navbar .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: var(--white);
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .navbar .nav-links a {
+      color: var(--white);
       text-decoration: none;
       font-weight: 500;
-      margin: 0 20px;
-      font-size: 1.05rem;
+      font-size: 1rem;
       transition: color 0.3s ease;
     }
 
-    nav a:hover, nav a.active {
+    .navbar .nav-links a:hover {
       color: var(--gold);
     }
 
+    @media (max-width: 768px) {
+      .navbar .menu-toggle {
+        display: flex;
+      }
+
+      .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        padding: 20px;
+      }
+
+      .navbar .nav-links.show {
+        display: flex;
+      }
+
+      .navbar .nav-links a {
+        margin: 12px 0;
+        text-align: center;
+      }
+    }
+
+    /* Main Content Styles */
     main {
       max-width: 1280px;
       margin: 0 auto;
@@ -122,6 +174,7 @@
       border-radius: 2px;
     }
 
+    /* Card and Article Styles */
     .event-card,
     .article-section {
       background: var(--card-bg);
@@ -135,7 +188,6 @@
 
     .event-card {
       border-left: 6px solid var(--gold);
-      border-left-style: solid;
     }
 
     .event-card h3,
@@ -157,6 +209,7 @@
       font-weight: 600;
     }
 
+    /* Features Grid */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -189,22 +242,54 @@
       color: var(--text-light);
     }
 
+    /* Radio Section Styles */
+    .radio-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .radio-wrapper iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .radio-credit {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    .radio-credit a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .radio-credit a:hover {
+      text-decoration: underline;
+    }
+
+    /* CTA Section */
     .cta {
       background: var(--primary);
-      color: white;
+      color: var(--white);
       text-align: center;
       padding: 100px 20px;
     }
 
     .cta h2 {
-      color: white;
+      color: var(--white);
       margin-bottom: 24px;
     }
 
     .cta .btn {
       display: inline-block;
       background: var(--gold);
-      color: #0a1f3a;
+      color: var(--primary);
       font-weight: 600;
       padding: 16px 48px;
       border-radius: 50px;
@@ -219,6 +304,7 @@
       box-shadow: 0 16px 35px rgba(201, 162, 63, 0.45);
     }
 
+    /* Archived Message (if needed, but not in current content) */
     .archived-message {
       text-align: center;
       color: var(--text-light);
@@ -232,6 +318,7 @@
       font-weight: 500;
     }
 
+    /* Floating WhatsApp Button */
     .whatsapp-float {
       position: fixed;
       bottom: 30px;
@@ -239,7 +326,7 @@
       width: 70px;
       height: 70px;
       background: #25D366;
-      color: white;
+      color: var(--white);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -256,6 +343,7 @@
       box-shadow: 0 12px 35px rgba(0,0,0,0.3);
     }
 
+    /* Footer Styles */
     footer {
       background: #0a0f1a;
       color: #94a3b8;
@@ -268,136 +356,188 @@
       margin: 12px 0;
     }
 
+    /* Media Queries */
     @media (max-width: 768px) {
-      header { padding: 120px 20px 80px; }
-      header h1 { font-size: 3rem; }
-      h2 { font-size: 2.4rem; }
-      .event-card, .article-section { padding: 32px; }
-      nav a { margin: 0 14px; font-size: 0.95rem; }
+      header {
+        padding: 120px 20px 80px;
+      }
+
+      header h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      .event-card,
+      .article-section {
+        padding: 32px;
+      }
+
+      .navbar {
+        padding: 16px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="logo.jpg" alt="Atone Chapel Logo" class="logo">
-  <h1>Atone Chapel</h1>
-  <p>A Covenant Altar of Power, Atonement & Prophetic Authority</p>
-</header>
+  <!-- Header Section -->
+  <header>
+    <img src="logo.jpg" alt="Atone Chapel Logo" class="logo">
+    <h1>Atone Chapel</h1>
+    <p>A Covenant Altar of Power, Atonement & Prophetic Authority</p>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="school.html">Bible School</a>
-  <a href="give.html">Give</a>
-</nav>
-
-<main>
-
-  <section class="event-card">
-    <h3>Current Program</h3>
-    <div class="divider"></div>
-    <p><strong>21 Days Fasting & Prayers</strong></p>
-    <p><strong>Theme:</strong> Dominion Power (Psalm 89:20–23)</p>
-    <p><strong>Date:</strong> 12th January – 1st February 2026</p>
-    <p><strong>Time:</strong> 6:30pm – 8:30pm Daily</p>
-    <p><strong>Venue:</strong> Shalom Estate, Potsin (off Winneba – Kasoa Highway)</p>
-    <p><strong>Host:</strong> Prophet Joseph Adarkwah</p>
-  </section>
-
-  <section>
-    <h2>Welcome to Atone Chapel</h2>
-    <div class="divider"></div>
-    <p style="max-width:760px; margin:0 auto; font-size:1.18rem; color:var(--text-light); text-align:center;">
-      A prophetic community raised to demonstrate the power of atonement, intercession, 
-      and accurate prophetic ministry in this generation.
-    </p>
-  </section>
-
-  <section id="daily-article" class="article-section">
-    <h2>Daily Article</h2>
-    <div class="divider"></div>
-    <h3 id="article-title">The Upward Call in the New Covenant</h3>
-    <p style="font-size:1.15rem; color:var(--text-light);">
-      In the New Covenant era, God’s call is not limited to prophets in the Old Testament sense. Through the Holy Spirit, every believer hears the upward call in Christ Jesus (Philippians 3:14). Yet the initial call—the sound from above—is to salvation: “Come to me, all you who are weary and burdened, and I will give you rest” (Matthew 11:28, NIV).  
-    </p>
-  </section>
-
-  <section>
-    <h2>About Us</h2>
-    <div class="divider"></div>
-    
-    <div style="max-width: 900px; margin: 0 auto 60px; text-align: left;">
-      <p style="font-size: 1.18rem; color: var(--text-light); margin-bottom: 32px;">
-        Atone Chapel is a prophetic ministry founded under the divine mandate to raise a generation that walks in dominion power through the mystery of atonement, fervent prayer, and accurate prophetic revelation.
-      </p>
-      
-      <p style="font-size: 1.18rem; color: var(--text-light); margin-bottom: 32px;">
-        We are a covenant community where lives are transformed by the blood of Jesus Christ, deep worship, prophetic accuracy, and the uncompromising teaching of the Word of God.
-      </p>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="school.html">Bible School</a>
+      <a href="give.html">Give</a>
+    </div>
+  </nav>
 
-    <div class="features">
-      <div class="feature-card">
-        <h3>Our Vision</h3>
-        <p>To establish a living covenant altar where believers encounter true atonement, receive redemption, and are empowered to exercise dominion in every sphere of life.</p>
-      </div>
-      
-      <div class="feature-card">
-        <h3>Our Mission</h3>
-        <p>
-          • Preach the full gospel of atonement and reconciliation through Christ<br>
-          • Raise prophetic voices and intercessors for the end-time harvest<br>
-          • Equip believers with deep revelatory knowledge of Scripture<br>
-          • Demonstrate the tangible power of God through signs, wonders, and deliverance
+  <!-- Main Content -->
+  <main>
+
+    <!-- Current Program Section -->
+    <section class="event-card">
+      <h3>Current Program</h3>
+      <div class="divider"></div>
+      <p><strong>21 Days Fasting & Prayers</strong></p>
+      <p><strong>Theme:</strong> Dominion Power (Psalm 89:20–23)</p>
+      <p><strong>Date:</strong> 12th January – 1st February 2026</p>
+      <p><strong>Time:</strong> 6:30pm – 8:30pm Daily</p>
+      <p><strong>Venue:</strong> Shalom Estate, Potsin (off Winneba – Kasoa Highway)</p>
+      <p><strong>Host:</strong> Prophet Joseph Adarkwah</p>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+      <h2>Welcome to Atone Chapel</h2>
+      <div class="divider"></div>
+      <p style="max-width:760px; margin:0 auto; font-size:1.18rem; color:var(--text-light); text-align:center;">
+        A prophetic community raised to demonstrate the power of atonement, intercession, 
+        and accurate prophetic ministry in this generation.
+      </p>
+    </section>
+
+    <!-- Daily Article Section -->
+    <section id="daily-article" class="article-section">
+      <h2>Daily Article</h2>
+      <div class="divider"></div>
+      <h3 id="article-title">The Upward Call in the New Covenant</h3>
+      <p style="font-size:1.15rem; color:var(--text-light);">
+        In the New Covenant era, God’s call is not limited to prophets in the Old Testament sense. Through the Holy Spirit, every believer hears the upward call in Christ Jesus (Philippians 3:14). Yet the initial call—the sound from above—is to salvation: “Come to me, all you who are weary and burdened, and I will give you rest” (Matthew 11:28, NIV).  
+      </p>
+    </section>
+
+    <!-- Radio Section -->
+    <section id="radio">
+      <h2>Atone FM Radio</h2>
+      <div class="divider"></div>
+      <div class="radio-wrapper">
+        <iframe 
+          src="https://zeno.fm/player/atone-fm" 
+          allow="autoplay"
+          loading="lazy"
+          title="Atone FM Radio">
+        </iframe>
+        <p class="radio-credit">
+          Powered by <a href="https://zeno.fm/" target="_blank" rel="noopener noreferrer">Zeno.FM</a>
         </p>
       </div>
-      
-      <div class="feature-card">
-        <h3>Our Leader</h3>
-        <p><strong>Prophet Joseph Adarkwah</strong> carries a strong prophetic and apostolic anointing. His ministry is marked by precision, compassion, spiritual authority, and a burning passion for souls and kingdom advancement.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <div class="divider"></div>
+      <div style="max-width: 900px; margin: 0 auto 60px; text-align: left;">
+        <p style="font-size: 1.18rem; color: var(--text-light); margin-bottom: 32px;">
+          Atone Chapel is a prophetic ministry founded under the divine mandate to raise a generation that walks in dominion power through the mystery of atonement, fervent prayer, and accurate prophetic revelation.
+        </p>
+        <p style="font-size: 1.18rem; color: var(--text-light); margin-bottom: 32px;">
+          We are a covenant community where lives are transformed by the blood of Jesus Christ, deep worship, prophetic accuracy, and the uncompromising teaching of the Word of God.
+        </p>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Our Mandate</h2>
-    <div class="divider"></div>
-    <div class="features">
-      <div class="feature-card">
-        <h3>Prayer & Intercession</h3>
-        <p>Building spiritual altars that enforce divine verdicts and shift atmospheres.</p>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Our Vision</h3>
+          <p>To establish a living covenant altar where believers encounter true atonement, receive redemption, and are empowered to exercise dominion in every sphere of life.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Our Mission</h3>
+          <p>
+            • Preach the full gospel of atonement and reconciliation through Christ<br>
+            • Raise prophetic voices and intercessors for the end-time harvest<br>
+            • Equip believers with deep revelatory knowledge of Scripture<br>
+            • Demonstrate the tangible power of God through signs, wonders, and deliverance
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Our Leader</h3>
+          <p><strong>Prophet Joseph Adarkwah</strong> carries a strong prophetic and apostolic anointing. His ministry is marked by precision, compassion, spiritual authority, and a burning passion for souls and kingdom advancement.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <h3>Prophetic Ministry</h3>
-        <p>Releasing timely, accurate words that bring clarity, healing and direction.</p>
+    </section>
+
+    <!-- Our Mandate Section -->
+    <section id="mandate">
+      <h2>Our Mandate</h2>
+      <div class="divider"></div>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Prayer & Intercession</h3>
+          <p>Building spiritual altars that enforce divine verdicts and shift atmospheres.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Prophetic Ministry</h3>
+          <p>Releasing timely, accurate words that bring clarity, healing and direction.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Teaching & Discipleship</h3>
+          <p>Imparting sound doctrine that produces mature, kingdom-impact believers.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <h3>Teaching & Discipleship</h3>
-        <p>Imparting sound doctrine that produces mature, kingdom-impact believers.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta">
-    <h2>Join Us Live</h2>
-    <p>Daily online prayer – 4:00 AM Ghana Time</p>
-    <a href="https://wa.me/233244491177" class="btn">Connect on WhatsApp</a>
-  </section>
+    <!-- Call to Action Section -->
+    <section class="cta">
+      <h2>Join Us Live</h2>
+      <p>Daily online prayer – 4:00 AM Ghana Time</p>
+      <a href="https://wa.me/233244491177" class="btn">Connect on WhatsApp</a>
+    </section>
 
-</main>
+  </main>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/233244491177" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-    <path d="M12 2C6.48 2 2 6.48 2 12c0 2.14.7 4.11 1.88 5.71L2 22l4.29-1.88C7.89 21.3 9.86 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm3.78 14.38c-.25.7-.73 1.27-1.4 1.41-.67.14-1.4.21-2.38-.38-.98-.59-1.6-1.96-2.08-2.93-.48-.97-.64-1.81-.14-2.5.5-.69 1.51-.88 2.01-.88.5 0 1 .25 1.32.75.32.5.43 1.07.32 1.62-.11.55-.47.98-.97 1.25z"/>
-  </svg>
-</a>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/233244491177" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+      <path d="M12 2C6.48 2 2 6.48 2 12c0 2.14.7 4.11 1.88 5.71L2 22l4.29-1.88C7.89 21.3 9.86 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm3.78 14.38c-.25.7-.73 1.27-1.4 1.41-.67.14-1.4.21-2.38-.38-.98-.59-1.6-1.96-2.08-2.93-.48-.97-.64-1.81-.14-2.5.5-.69 1.51-.88 2.01-.88.5 0 1 .25 1.32.75.32.5.43 1.07.32 1.62-.11.55-.47.98-.97 1.25z"/>
+    </svg>
+  </a>
 
-<footer>
-  <p>© 2026 Atone Chapel. All Rights Reserved.</p>
-  <p>Shalom Estate, Potsin | +233 244 491 177</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Atone Chapel. All Rights Reserved.</p>
+    <p>Shalom Estate, Potsin | +233 244 491 177</p>
+  </footer>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
