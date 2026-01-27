@@ -342,3 +342,20 @@ footer {
 #about .feature-card h3 {
   color: var(--primary);
 }
+/* Live Now styling */
+.live-badge {
+  color: #ff1a1a;
+  font-weight: 700;
+}
+
+.live-name {
+  color: #16a34a; /* rich green */
+  font-weight: 500;
+}
+}
+
+/* Optional: keep dot aligned */
+.live-dot {
+  margin-right: 4px;
+}
+
