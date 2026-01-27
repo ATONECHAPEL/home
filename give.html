@@ -1,69 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Give - Atone Chapel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give & Partner | Atone Chapel</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f7f9;
+      color: #1e293b;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(rgba(10,31,58,.85), rgba(10,31,58,.92)),
+                  url('banner.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 140px 20px 100px;
+      color: #fff;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #e8c97f;
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      opacity: .95;
+    }
+
+    nav {
+      background: #0a1f3a;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #e8c97f;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .give-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 60px;
+    }
+
+    .give-intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+
+    .give-intro p {
+      font-size: 1.15rem;
+      color: #475569;
+    }
+
+    .verse {
+      background: #fff;
+      padding: 40px;
+      border-left: 6px solid #c9a23f;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      font-style: italic;
+      margin-bottom: 70px;
+    }
+
+    .verse cite {
+      display: block;
+      margin-top: 16px;
+      font-style: normal;
+      font-weight: 500;
+      color: #334155;
+    }
+
+    .give-btn {
+      display: inline-block;
+      background: #c9a23f;
+      color: #0a1f3a;
+      padding: 16px 50px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1.15rem;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(201,162,63,.4);
+      transition: all .3s ease;
+    }
+
+    .give-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(201,162,63,.5);
+    }
+
+    .giving-options {
+      margin-top: 90px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .option {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.07);
+      text-align: center;
+    }
+
+    .option h3 {
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      color: #0a1f3a;
+    }
+
+    .option p {
+      color: #475569;
+      font-size: 1.05rem;
+    }
+
+    .thank-you {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 1.15rem;
+      color: #334155;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      background: #0a0f1a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 100px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <img src="logo.jpg" alt="Atone Chapel Logo" class="logo">
-        <h1>Partner With Us</h1>
-        <p>Sow a Seed into God's Kingdom Work</p>
-    </header>
+<header>
+  <img src="logo.jpg" alt="Atone Chapel Logo" class="logo" style="width:90px;margin-bottom:20px;">
+  <h1>Give & Partner With Us</h1>
+  <p>Sow into God’s work • Advance the Kingdom • Transform Lives</p>
+</header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="school.html">Bible School</a>
-        <a href="give.html">Give</a>
-        <a href="about.html">About Us</a>
-    </nav>
+<nav class="navbar">
+  </div>
+</section>
 
-    <main>
-        <section class="give-intro">
-            <h2>Support the Ministry</h2>
-            <p>Your giving helps us continue preaching the gospel, supporting the needy, maintaining our radio outreach, and expanding the kingdom of God through Atone Chapel.</p>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="live.html">Live</a>
+    <a href="bibleschool.html">Bible School</a>
+    <a href="#about">About</a>
+    <a href="give.html">Give</a>
+  </div>
+</nav>
 
-            <div class="verse" style="max-width: 900px; margin: 40px auto;">
-                "Give, and it will be given to you. Good measure, pressed down, shaken together, running over, will be put into your lap. For with the measure you use it will be measured back to you."
-                <cite>— Luke 6:38 (ESV)</cite>
-            </div>
-        </section>
+<main>
 
-        <section class="giving-options">
-            <h2>Ways to Give</h2>
-            <div class="options-grid">
-                <div class="option">
-                    <h3>Mobile Money (Ghana)</h3>
-                    <p><strong>MTN MoMo:</strong> +233 244 491 177<br>
-                       Name: Joseph Adarkwah</p>
-                </div>
-                <div class="option">
-                    <h3>Bank Transfer</h3>
-                    <p>Contact us via WhatsApp for bank details.</p>
-                </div>
-                <div class="option">
-                    <h3>In-Person Offering</h3>
-                    <p>Give during any of our services at Shalom Estate, Potsin.</p>
-                </div>
-            </div>
+  <section class="give-intro">
+    <h2>Partner in Kingdom Advancement</h2>
+    <p>
+      Your generosity fuels prayer, evangelism, discipleship, and the propagation
+      of the gospel through Atone Chapel.
+    </p>
+  </section>
 
-            <p class="thank-you">Every seed sown is a partnership in souls being saved, lives transformed, and God's kingdom advancing. Thank you for your generous heart!</p>
-        </section>
-    </main>
+  <div class="verse">
+    “Give, and it will be given to you. Good measure, pressed down, shaken together,
+    running over, will be put into your lap.”
+    <cite>— Luke 6:38 (ESV)</cite>
+  </div>
 
-    <a href="https://wa.me/message/EL3CNAPH7ZWFA1" class="whatsapp-float" target="_blank">
-        WhatsApp
+  <div style="text-align:center; margin-bottom:80px;">
+    <a href="https://www.sendwave.com/en/countries/ghana" class="give-btn">
+      Give via MoMo or Bank
     </a>
+  </div>
 
-    <footer>
-        <p>&copy; 2026 Atone Chapel. All rights reserved.</p>
-        <p>A place of atonement, redemption, and divine encounter with the living God.</p>
-        <p>Contact: +233 244 491 177</p>
-    </footer>
+  <section class="giving-options">
+    <div class="options-grid">
+
+      <div class="option">
+        <h3>Mobile Money (Ghana)</h3>
+        <p>
+          <strong>MTN MoMo:</strong><br>
+          +233 244 491 177<br>
+          Name: Joseph Adarkwah
+        </p>
+      </div>
+
+      <div class="option">
+        <h3>Bank Transfer</h3>
+        <p>
+          Kindly contact us via WhatsApp for secure bank details.
+        </p>
+      </div>
+
+      <div class="option">
+        <h3>In-Person Offering</h3>
+        <p>
+          Give during any service at<br>
+          Shalom Estate, Potsin.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="thank-you">
+      Every seed sown is a partnership in souls saved, destinies restored,
+      and God’s kingdom advancing.  
+      <strong>Thank you for giving.</strong>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Atone Chapel. All Rights Reserved.</p>
+  <p>A covenant altar of atonement, redemption, and divine encounter.</p>
+  <p>Contact: +233 244 491 177</p>
+</footer>
 
 </body>
 </html>
