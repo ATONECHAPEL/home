@@ -230,7 +230,7 @@
     <span></span><span></span><span></span>
   </div>
   <div class="nav-links" id="navLinks">
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="live.html">Live</a>
     <a href="bibleschool.html">Bible School</a>
     <a href="about.html">About</a>
@@ -239,58 +239,6 @@
 </nav>
 
 <main>
-
-  <!-- INTRO -->
-  <section>
-    <h2>Our Mandate</h2>
-    <div class="divider"></div>
-    <p class="intro">
-      Atone Bible School exists to equip believers with sound doctrine,
-      spiritual authority, and practical ministry skills.
-      We are committed to raising kingdom leaders who walk in holiness,
-      demonstrate power, minister healing, and advance the gospel with excellence.
-    </p>
-  </section>
-
-  <!-- PILLARS -->
-  <section>
-    <h2>Core Pillars</h2>
-    <div class="divider"></div>
-
-    <div class="pillars">
-      <div class="pillar">
-        <h3>Excellence in Leadership</h3>
-        <p>
-          Developing disciplined, accountable, and Spirit-led leaders
-          who represent Christ with integrity and excellence.
-        </p>
-      </div>
-
-      <div class="pillar">
-        <h3>Power & Spiritual Authority</h3>
-        <p>
-          Training believers to walk in dominion, prayer mastery,
-          prophetic accuracy, and spiritual warfare.
-        </p>
-      </div>
-
-      <div class="pillar">
-        <h3>Healing & Deliverance</h3>
-        <p>
-          Imparting biblical understanding and practical activation
-          of divine healing, deliverance, and restoration.
-        </p>
-      </div>
-
-      <div class="pillar">
-        <h3>Evangelism & Missions</h3>
-        <p>
-          Equipping students to preach the gospel boldly,
-          win souls, disciple nations, and impact communities.
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!-- CURRICULUM -->
   <section class="curriculum">
@@ -307,6 +255,82 @@
       <li>Practical Ministry Activation & Mentorship</li>
     </ul>
   </section>
+
+<!-- ADMISSION REQUIREMENTS -->
+<section id="admissions">
+  <h2>Admission Requirements</h2>
+  <div class="divider"></div>
+
+  <div class="intro">
+    <p>
+      Atone Bible School is open to believers who are hungry for growth,
+      discipline, and spiritual responsibility. Admission is based on calling,
+      character, and commitment.
+    </p>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <h3>Spiritual Readiness</h3>
+      <p>
+        Applicants must be born again, committed to prayer,
+        and willing to grow in holiness and obedience.
+      </p>
+    </div>
+
+    <div class="pillar">
+      <h3>Commitment to Training</h3>
+      <p>
+        Students must attend classes faithfully,
+        complete assignments, and submit to mentorship.
+      </p>
+    </div>
+
+    <div class="pillar">
+      <h3>Character & Discipline</h3>
+      <p>
+        A teachable spirit, respect for leadership,
+        and godly character are required.
+      </p>
+    </div>
+
+    <div class="pillar">
+      <h3>Evangelistic Heart</h3>
+      <p>
+        A willingness to preach the gospel,
+        serve others, and represent Christ publicly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section id="application" class="cta">
+  <h2>Apply to Atone Bible School</h2>
+  <p>
+    Complete the application below. Our admissions team will contact you
+    after review.
+  </p>
+
+  <form class="application-form" onsubmit="sendToWhatsApp(event)">
+  <input type="text" id="name" placeholder="Full Name" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+  <input type="email" id="email" placeholder="Email Address">
+
+  <select id="calling" required>
+    <option value="">Area of Calling</option>
+    <option>Leadership & Ministry</option>
+    <option>Healing & Deliverance</option>
+    <option>Evangelism & Missions</option>
+    <option>Prophetic Ministry</option>
+  </select>
+
+  <textarea id="testimony" rows="4" placeholder="Brief salvation testimony"></textarea>
+
+  <button type="submit">Submit Application</button>
+</form>
+
+</section>
 
   <!-- CTA -->
   <section class="cta">
@@ -325,6 +349,30 @@
   <p>© 2026 Atone Chapel. All Rights Reserved.</p>
   <p>Raising leaders of power, excellence, and kingdom impact.</p>
 </footer>
+<script>
+function sendToWhatsApp(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const calling = document.getElementById("calling").value;
+  const testimony = document.getElementById("testimony").value;
+
+  const message =
+    `BIBLE SCHOOL APPLICATION%0A%0A` +
+    `Name: ${name}%0A` +
+    `Phone: ${phone}%0A` +
+    `Email: ${email}%0A` +
+    `Calling: ${calling}%0A%0A` +
+    `Testimony:%0A${testimony}`;
+
+  window.open(
+    `https://wa.me/233244491177?text=${message}`,
+    "_blank"
+  );
+}
+</script>
 
 </body>
 </html>
