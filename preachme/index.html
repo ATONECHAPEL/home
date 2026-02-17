@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>PREACHME – Prophetic Preaching Engine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="fire-bg"></div>
+  <div class="overlay-glow"></div>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo-area horizontal-logo">
+      <a href="index.html">
+        <img src="logo.png" alt="PREACHME Logo" class="logo-img" />
+      </a>
+
+      <h1 class="logo-text">
+        PREACHME
+        <span class="small-tagline">🔥 Prophetic Preaching Engine • Fire • Power • Authority 🔥</span>
+      </h1>
+    </div>
+  </header>
+
+  <!-- MAIN APP WRAPPER -->
+  <main class="app-layout">
+
+    <!-- LEFT PANEL -->
+    <section class="left-panel">
+
+      <!-- SEARCH INPUT -->
+      <div class="panel-card">
+        <h2>🔥 Type Any Topic & Preach Instantly</h2>
+
+        <div class="search-box">
+          <input
+            id="topicInput"
+            type="text"
+            placeholder="Example: Jesus is God, Power Against Delay, Covenant Fire..."
+          />
+          <button id="preachBtn">PREACH NOW 🔥</button>
+        </div>
+
+        <p class="hint">
+          Type any topic and PREACHME will generate prophetic preaching automatically.
+        </p>
+      </div>
+
+      <!-- TOPIC PANEL -->
+      <div class="panel-card">
+        <h2>📌 Prophetic Topics Panel</h2>
+
+        <div class="dropdown-box">
+          <select id="topicDropdown">
+            <option value="">-- Select a Topic --</option>
+          </select>
+          <button id="preachSelectedBtn">PREACH SELECTED 🔥</button>
+        </div>
+
+        <!-- SPEED CONTROL -->
+        <div class="speed-control">
+          <label for="speedRange">Preaching Speed:</label>
+          <input type="range" id="speedRange" min="0.6" max="1.5" step="0.1" value="1" />
+          <span id="speedValue">1.0x</span>
+        </div>
+
+        <!-- EXPORT BUTTONS -->
+        <div class="export-panel-buttons">
+          <button id="copyChatBtn">📋 COPY</button>
+          <button id="downloadChatBtn">⬇ TXT</button>
+          <button id="downloadPdfBtn">📄 PDF</button>
+          <button id="voiceToggleBtn">🔊 VOICE ON</button>
+          <!-- CONTACT WHATSAPP BUTTON -->
+      <!-- CONTACT WHATSAPP BUTTON -->
+      <a href="https://wa.me/233244491177" target="_blank" class="whatsapp-contact-btn">
+      <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+       Contact Us on WhatsApp </a>
+        </div>
+
+        <p class="hint small">
+          All preachings generated will remain here and can be exported anytime.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- RIGHT PANEL -->
+    <section class="right-panel">
+      <div class="panel-card">
+        <h2>🎙️ Live Preaching Chat Panel</h2>
+
+        <div id="chatBox" class="sermon-output">
+          <p class="sermon-sentence">
+            👋 Welcome to PREACHME! Type a topic or select from dropdown to start preaching.
+          </p>
+        </div>
+
+        <!-- ✅ CONTROL BUTTONS MOVED UNDER CHAT BOX -->
+        <div class="chat-controls-row">
+          <button id="listenAllBtn">🎧 LISTEN</button>
+          <button id="pauseBtn">⏸</button>
+          <button id="resumeBtn">▶</button>
+          <button id="restartBtn">🔁</button>
+          <button id="stopBtn">⛔</button>
+          <button id="continueBtn">🔥 CONTINUE</button>
+          <button id="clearChatBtn">🗑 CLEAR</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 PREACHME • Built for Prophetic Revival • PROPHET J.ADARKWAH 🔥</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+
+</body>
+</html>

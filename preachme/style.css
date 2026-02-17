@@ -1,0 +1,523 @@
+/* ============================
+   PREACHME - FIRE THEME UI (2026)
+   FINAL PROFESSIONAL FIXED LAYOUT
+   ALL PANELS + BUTTONS ALWAYS VISIBLE
+   NO HORIZONTAL OVERFLOW
+   NO VERTICAL OVERFLOW (DESKTOP)
+   ONLY CHAT SCROLLS
+   ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #050505;
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+/* ============================
+   BACKGROUND EFFECTS
+   ============================ */
+.fire-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(255, 140, 0, 0.18), transparent 65%),
+    radial-gradient(circle at bottom, rgba(255, 0, 0, 0.16), transparent 70%),
+    radial-gradient(circle at center, rgba(255, 215, 0, 0.05), transparent 60%);
+  z-index: -2;
+}
+
+.overlay-glow {
+  position: fixed;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* ============================
+   HEADER (SMALL HEIGHT FIXED)
+   ============================ */
+.top-header {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 3px 10px 1px;
+  height: auto;
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.logo-area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: clamp(100px, 5vw, 85px);
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 16px rgba(255, 140, 0, 0.85));
+}
+
+.logo-text {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 900;
+  color: gold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px rgba(255, 140, 0, 0.85);
+  line-height: 1.05;
+}
+
+.logo-text .small-tagline {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: rgba(255, 215, 0, 0.78);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+  text-shadow: 0 0 6px rgba(255, 69, 0, 0.25);
+}
+
+/* ============================
+   MAIN APP LAYOUT (PERFECT SCREEN FIT)
+   ============================ */
+.app-layout {
+  flex: 1;
+  width: 100%;
+  max-width: 1550px;
+  margin: auto;
+  padding: 6px 10px 6px;
+
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 14px;
+
+  overflow: hidden;
+}
+
+/* ============================
+   PANELS
+   ============================ */
+.left-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  overflow: hidden;
+}
+
+.right-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ============================
+   PANEL CARDS
+   ============================ */
+.panel-card {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 0 14px rgba(255, 140, 0, 0.12);
+  overflow: hidden;
+}
+
+.panel-card h2 {
+  font-size: 0.96rem;
+  color: gold;
+  margin-bottom: 7px;
+  text-shadow: 0 0 9px rgba(255, 140, 0, 0.65);
+}
+
+/* ============================
+   INPUT BOX
+   ============================ */
+.search-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px;
+  width: 100%;
+  align-items: center;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 9px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.28);
+  outline: none;
+  background: rgba(0, 0, 0, 0.88);
+  color: white;
+  font-size: 0.82rem;
+  box-shadow: 0 0 9px rgba(255, 140, 0, 0.18);
+}
+
+.search-box input:focus {
+  border: 1px solid gold;
+  box-shadow: 0 0 13px rgba(255, 215, 0, 0.55);
+}
+
+/* ============================
+   DROPDOWN BOX
+   ============================ */
+.dropdown-box {
+  display: grid;
+  grid-template-columns: 1.0fr auto;
+  gap: 5px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.dropdown-box select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.28);
+  outline: none;
+  background: rgba(0, 0, 0, 0.88);
+  color: gold;
+  font-weight: bold;
+  font-size: 0.82rem;
+  box-shadow: 0 0 9px rgba(255, 140, 0, 0.18);
+}
+
+.dropdown-box select:focus {
+  border: 1px solid gold;
+  box-shadow: 0 0 13px rgba(255, 215, 0, 0.55);
+}
+
+/* ============================
+   BUTTONS (SOLID STYLE - REDUCED HEIGHT)
+   ============================ */
+button {
+  background: #ff9900;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+  box-shadow: 0 0 9px rgba(255, 140, 0, 0.55);
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.85);
+}
+
+/* Preach Buttons */
+.search-box button,
+.dropdown-box button {
+  padding: 8px 11px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+/* ============================
+   SPEED CONTROL (COMPACT)
+   ============================ */
+.speed-control {
+  width: 100%;
+  margin-top: 3px;
+  padding: 1px;
+  border-radius: 14px;
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  text-align: center;
+}
+
+.speed-control label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.speed-control input {
+  width: 100%;
+  max-width: 220px;
+  margin-top: 5px;
+}
+
+#speedValue {
+  display: block;
+  margin-top: 3px;
+  font-weight: bold;
+  color: gold;
+  font-size: 0.78rem;
+}
+
+/* ============================
+   CHAT PANEL (FULL HEIGHT)
+   ============================ */
+.right-panel .panel-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CHAT BOX */
+.sermon-output {
+  flex: 1;
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.92);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+
+  box-shadow: inset 0 0 14px rgba(255, 140, 0, 0.14);
+}
+
+/* Chat messages */
+.chat-message {
+  background: rgba(255, 215, 0, 0.06);
+  border: 1px solid rgba(255, 140, 0, 0.22);
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 9px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 9px rgba(255, 140, 0, 0.12);
+}
+
+/* ============================
+   NEW: CONTROL BUTTONS UNDER CHAT BOX (ONE HORIZONTAL LINE)
+   ============================ */
+.chat-controls-row {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.chat-controls-row button {
+  flex: 1;
+  padding: 7px 6px;
+  border-radius: 11px;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+/* CLEAR button PURE WHITE */
+#clearChatBtn {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  font-weight: 900;
+}
+
+/* ============================
+   EXPORT BUTTONS (COMPACT)
+   ============================ */
+.export-panel-buttons {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  width: 100%;
+}
+
+.export-panel-buttons button {
+  padding: 7px;
+  border-radius: 12px;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+/* ============================
+   WHATSAPP CONTACT BUTTON (WITH ICON)
+   ============================ */
+.whatsapp-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 14px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-decoration: none;
+
+  color: white;
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.45);
+
+  transition: 0.2s ease;
+}
+
+.whatsapp-contact-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.75);
+}
+
+.whatsapp-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ============================
+   HINT TEXT
+   ============================ */
+.hint {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.hint.small {
+  font-size: 0.68rem;
+  opacity: 0.75;
+  margin-top: 7px;
+}
+
+/* Scrollbar */
+.sermon-output::-webkit-scrollbar {
+  width: 7px;
+}
+
+.sermon-output::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+}
+
+.sermon-output::-webkit-scrollbar-thumb {
+  background: gold;
+  border-radius: 10px;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+.reading-highlight {
+  background: rgba(0, 140, 255, 0.25);
+  border-left: 4px solid #00bfff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 0 14px rgba(0, 180, 255, 0.75);
+}
+
+/* ============================
+   RESPONSIVE DESIGN (PHONE FIX)
+   ============================ */
+@media (max-width: 1050px) {
+  html, body {
+    overflow-y: auto;
+  }
+
+  body {
+    overflow-y: auto;
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* CHAT FIRST */
+  .right-panel {
+    order: 1;
+  }
+
+  /* TOPICS BELOW */
+  .left-panel {
+    order: 2;
+  }
+
+  .left-panel,
+  .right-panel {
+    height: auto;
+    overflow: visible;
+  }
+
+  .sermon-output {
+    height: 420px;
+    min-height: 420px;
+  }
+
+  /* allow wrapping on small screens */
+  .chat-controls-row {
+    flex-wrap: wrap;
+  }
+
+  .chat-controls-row button {
+    flex: 1 1 120px;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo-area {
+    flex-wrap: wrap;
+  }
+
+  .logo-text {
+    text-align: center;
+  }
+
+  .search-box,
+  .dropdown-box {
+    grid-template-columns: 1fr;
+  }
+
+  .export-panel-buttons {
+    grid-template-columns: 1fr;
+  }
+}
