@@ -4,126 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Session | Atone Chapel</title>
+
   <meta name="description" content="Live prophetic prayers and teachings with Prophet Joseph Adarkwah – Atone Chapel">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0a1f3a;
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      color: #c9a23f;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: #cbd5e1;
-      font-size: 1.1rem;
-    }
-
-    .live-wrapper {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .video-box {
-      background: #000;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-    }
-
-    iframe {
-      width: 100%;
-      height: 520px;
-      border: none;
-    }
-
-    .back-home {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .back-home a {
-      color: #c9a23f;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.1rem;
-    }
-
-    .back-home a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      iframe {
-        height: 300px;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-   </div>
-</section>
 
   <div class="menu-toggle" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
+
   <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="live.html">Live</a>
     <a href="bibleschool.html">Bible School</a>
     <a href="about.html">About</a>
     <a href="give.html">Give</a>
+
+    <!-- PREACHME -->
+    <a href="preachme/index.html">🔥 PreachMe AI</a>
   </div>
-  </div>
+
 </nav>
 
-  <header>
-    <h1>🔴 Live Prophetic Session</h1>
-    <p>Streaming with Prophet Joseph Adarkwah</p>
-  </header>
 
-  <main class="live-wrapper">
-    <div class="video-box">
+<!-- ================= HEADER ================= -->
+<header style="padding:90px 20px 60px; background:linear-gradient(rgba(10,31,58,.92),rgba(10,31,58,.95)), url('assets/banner.jpg') center/cover;">
+  <img src="assets/logo.jpg" alt="Atone Chapel Logo" class="logo">
+  <h1>🔴 Live Prophetic Session</h1>
+  <p>Streaming with Prophet Joseph Adarkwah</p>
+</header>
 
-      <!-- FACEBOOK LIVE -->
+
+<main>
+
+<!-- ================= LIVE VIDEO ================= -->
+<section class="live-section">
+
+  <h2>Live Broadcast</h2>
+  <div class="divider"></div>
+
+  <div class="live-video-wrapper dark-live">
+    <div class="video-responsive">
       <iframe
-        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2FprophetjosephAdarkwah1%2Fvideos%2F1550964969399205%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe> 
+        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/prophetjosephAdarkwah1/videos/1550964969399205/&show_text=false"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        title="Atone Chapel Live Stream">
       </iframe>
-
-      <!-- OR YOUTUBE LIVE -->
-      <!--
-      <iframe
-      
-      </iframe>
-      -->
-
     </div>
-  </main>
-
-  <div class="back-home">
-    <a href="index.html">← Back to Homepage</a>
   </div>
+
+</section>
+
+
+<!-- ================= PREACHME IMAGE MOVED DOWN ================= -->
+<section class="preachme-box" style="max-width:1000px; margin: 0 auto;">
+  <h2>PreachMe AI Sermon Generator</h2>
+  <div class="divider"></div>
+
+  <a href="preachme/index.html" title="Open PreachMe AI">
+    <img src="assets/preach.png" alt="PreachMe AI - Sermon Generator">
+  </a>
+
+  <p class="preachme-caption">
+    🔥 Click to Open PreachMe AI and Generate Powerful Sermons
+  </p>
+</section>
+
+
+<!-- ================= BACK HOME ================= -->
+<section style="text-align:center; padding: 60px 0;">
+  <a href="index.html" class="btn">← Back to Homepage</a>
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Atone Chapel. All Rights Reserved.</p>
+</footer>
+
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -5,334 +5,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atone Bible School | Raising Kingdom Leaders</title>
 
+  <meta name="description" content="Atone Bible School - A prophetic training ground for raising kingdom leaders, intercessors, and ministers of power.">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f7f7f9;
-      color: #1e293b;
-    }
-
-    /* Header */
-    header {
-      background: linear-gradient(rgba(10,31,58,.85), rgba(10,31,58,.95)),
-                  url('banner.jpg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 150px 20px 110px;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
-      color: #e8c97f;
-      margin-bottom: 14px;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      max-width: 760px;
-      margin: 0 auto;
-      opacity: 0.95;
-    }
-
-    /* Navigation */
-    nav {
-      background: #0a1f3a;
-      padding: 16px 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #e8c97f;
-    }
-
-    /* Main */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 90px 20px;
-    }
-
-    section {
-      margin-bottom: 100px;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #0a1f3a;
-    }
-
-    .divider {
-      width: 90px;
-      height: 4px;
-      background: #c9a23f;
-      margin: 0 auto 50px;
-      border-radius: 2px;
-    }
-
-    /* Intro */
-    .intro {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 1.15rem;
-      color: #475569;
-      line-height: 1.8;
-    }
-
-    /* Pillars */
-    .pillars {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-      margin-top: 60px;
-    }
-
-    .pillar {
-      background: #fff;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-      text-align: center;
-    }
-
-    .pillar h3 {
-      color: #0a1f3a;
-      font-size: 1.4rem;
-      margin-bottom: 14px;
-    }
-
-    .pillar p {
-      color: #475569;
-      font-size: 1.05rem;
-    }
-
-    /* Curriculum */
-    .curriculum {
-      background: linear-gradient(
-        180deg,
-        rgba(10,31,58,.95),
-        rgba(10,31,58,.88)
-      );
-      padding: 100px 30px;
-      border-radius: 20px;
-      color: #e5e7eb;
-    }
-
-    .curriculum h2 {
-      color: #e8c97f;
-    }
-
-    .curriculum ul {
-      max-width: 800px;
-      margin: 0 auto;
-      list-style: none;
-      padding: 0;
-      font-size: 1.1rem;
-    }
-
-    .curriculum li {
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,.15);
-    }
-
-    /* Call to Action */
-    .cta {
-      text-align: center;
-      background: #0a1f3a;
-      color: #fff;
-      padding: 100px 20px;
-      border-radius: 20px;
-    }
-
-    .cta h2 {
-      color: #e8c97f;
-      margin-bottom: 24px;
-    }
-
-    .cta p {
+    /* Extra form styling only for this page */
+    .application-form {
       max-width: 720px;
-      margin: 0 auto 40px;
-      font-size: 1.15rem;
-      color: #cbd5e1;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 35px;
     }
 
-    .cta a {
-      display: inline-block;
-      background: #c9a23f;
+    .application-form input,
+    .application-form select,
+    .application-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(10, 31, 58, 0.15);
+      outline: none;
+      font-size: 1rem;
+      font-family: "Inter", sans-serif;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+    }
+
+    .application-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .application-form button {
+      padding: 15px;
+      border: none;
+      border-radius: 999px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      cursor: pointer;
+      background: linear-gradient(90deg, rgba(201, 162, 63, 0.85), #c9a23f);
       color: #0a1f3a;
-      padding: 16px 48px;
-      border-radius: 40px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.15rem;
-      box-shadow: 0 12px 30px rgba(201,162,63,.4);
-      transition: all .3s ease;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+      transition: transform 0.2s ease;
     }
 
-    .cta a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 40px rgba(201,162,63,.55);
-    }
-
-    footer {
-      background: #0a0f1a;
-      color: #94a3b8;
-      text-align: center;
-      padding: 60px 20px;
-      margin-top: 120px;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.8rem;
-      }
-
-      h2 {
-        font-size: 2.3rem;
-      }
+    .application-form button:hover {
+      transform: scale(1.03);
     }
   </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER / BANNER ================= -->
 <header>
-  <img src="logo.jpg" alt="Atone Chapel Logo" style="width:90px;margin-bottom:20px;">
-  <h1>Atone Bible School</h1>
-  <p>
-    A prophetic training ground for raising leaders of excellence,
-    power, healing, and evangelistic impact.
-  </p>
-</header>
 
-<nav>
-   </div>
-</section>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="live.html">Live</a>
-    <a href="bibleschool.html">Bible School</a>
-    <a href="about.html">About</a>
-    <a href="give.html">Give</a>
-  </div>
-</nav>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="live.html">Live</a>
+      <a href="preachme/index.html">🔥 PreachMe AI</a>
+      <a href="bibleschool.html">Bible School</a>
+      <a href="give.html">Give</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </nav>
 
-<main>
+  <!-- ================= HERO CONTENT ================= -->
+  <div class="hero-content">
+  <a href="index.html" title="Return to Homepage">
+  <img src="assets/logo.jpg" alt="Atone Chapel Logo" class="logo">
+</a>
+    <h1>Atone Bible School</h1>
 
-  <!-- CURRICULUM -->
-  <section class="curriculum">
-    <h2>Training Curriculum</h2>
-    <div class="divider"></div>
-
-    <ul>
-      <li>Foundations of Christian Doctrine & Sound Theology</li>
-      <li>Prayer, Intercession & Spiritual Warfare</li>
-      <li>Prophetic Ministry & Hearing the Voice of God</li>
-      <li>Healing, Deliverance & Power Ministry</li>
-      <li>Leadership, Character & Ministry Ethics</li>
-      <li>Evangelism, Missions & Church Planting</li>
-      <li>Practical Ministry Activation & Mentorship</li>
-    </ul>
-  </section>
-
-<!-- ADMISSION REQUIREMENTS -->
-<section id="admissions">
-  <h2>Admission Requirements</h2>
-  <div class="divider"></div>
-
-  <div class="intro">
     <p>
-      Atone Bible School is open to believers who are hungry for growth,
-      discipline, and spiritual responsibility. Admission is based on calling,
-      character, and commitment.
+      A prophetic training ground for raising leaders of excellence,
+      power, healing, deliverance, and evangelistic impact.
     </p>
   </div>
 
-  <div class="pillars">
-    <div class="pillar">
-      <h3>Spiritual Readiness</h3>
+</header>
+
+<main>
+
+  <!-- ================= CURRICULUM ================= -->
+  <section class="curriculum" style="margin-top: 40px;">
+    <h2>Training Curriculum</h2>
+    <div class="divider"></div>
+
+    <ul style="max-width: 850px; margin: 0 auto; list-style: none; padding: 0; font-size: 1.1rem;">
+      <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);">Foundations of Christian Doctrine & Sound Theology</li>
+      <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);">Prayer, Intercession & Spiritual Warfare</li>
+      <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);">Prophetic Ministry & Hearing the Voice of God</li>
+      <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);">Healing, Deliverance & Power Ministry</li>
+      <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);">Leadership, Character & Ministry Ethics</li>
+      <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);">Evangelism, Missions & Church Planting</li>
+      <li style="padding: 14px 0;">Practical Ministry Activation & Mentorship</li>
+    </ul>
+  </section>
+
+  <!-- ================= ADMISSIONS ================= -->
+  <section id="admissions">
+    <h2>Admission Requirements</h2>
+    <div class="divider"></div>
+
+    <div class="intro" style="max-width: 850px; margin: 0 auto; text-align: center; font-size: 1.1rem; font-weight: 600; color: rgba(10,31,58,0.85);">
       <p>
-        Applicants must be born again, committed to prayer,
-        and willing to grow in holiness and obedience.
+        Atone Bible School is open to believers who are hungry for growth,
+        discipline, and spiritual responsibility. Admission is based on calling,
+        character, and commitment.
       </p>
     </div>
 
-    <div class="pillar">
-      <h3>Commitment to Training</h3>
-      <p>
-        Students must attend classes faithfully,
-        complete assignments, and submit to mentorship.
-      </p>
+    <div class="pillars" style="margin-top: 60px;">
+      <div class="pillar">
+        <h3>Spiritual Readiness</h3>
+        <p>
+          Applicants must be born again, committed to prayer,
+          and willing to grow in holiness and obedience.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Commitment to Training</h3>
+        <p>
+          Students must attend classes faithfully,
+          complete assignments, and submit to mentorship.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Character & Discipline</h3>
+        <p>
+          A teachable spirit, respect for leadership,
+          and godly character are required.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Evangelistic Heart</h3>
+        <p>
+          A willingness to preach the gospel,
+          serve others, and represent Christ publicly.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="pillar">
-      <h3>Character & Discipline</h3>
-      <p>
-        A teachable spirit, respect for leadership,
-        and godly character are required.
-      </p>
-    </div>
+  <!-- ================= APPLICATION FORM ================= -->
+  <section id="application" class="cta">
+    <h2>Apply to Atone Bible School</h2>
 
-    <div class="pillar">
-      <h3>Evangelistic Heart</h3>
-      <p>
-        A willingness to preach the gospel,
-        serve others, and represent Christ publicly.
-      </p>
-    </div>
-  </div>
-</section>
+    <p>
+      Complete the application form below. Our admissions team will contact you
+      after review.
+    </p>
 
-<!-- APPLICATION FORM -->
-<section id="application" class="cta">
-  <h2>Apply to Atone Bible School</h2>
-  <p>
-    Complete the application below. Our admissions team will contact you
-    after review.
-  </p>
+    <form class="application-form" onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="email" id="email" placeholder="Email Address (Optional)">
 
-  <form class="application-form" onsubmit="sendToWhatsApp(event)">
-  <input type="text" id="name" placeholder="Full Name" required>
-  <input type="tel" id="phone" placeholder="Phone Number" required>
-  <input type="email" id="email" placeholder="Email Address">
+      <select id="calling" required>
+        <option value="">Area of Calling</option>
+        <option>Leadership & Ministry</option>
+        <option>Healing & Deliverance</option>
+        <option>Evangelism & Missions</option>
+        <option>Prophetic Ministry</option>
+      </select>
 
-  <select id="calling" required>
-    <option value="">Area of Calling</option>
-    <option>Leadership & Ministry</option>
-    <option>Healing & Deliverance</option>
-    <option>Evangelism & Missions</option>
-    <option>Prophetic Ministry</option>
-  </select>
+      <textarea id="testimony" rows="4" placeholder="Brief salvation testimony (Optional)"></textarea>
 
-  <textarea id="testimony" rows="4" placeholder="Brief salvation testimony"></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
 
-  <button type="submit">Submit Application</button>
-</form>
-
-</section>
-
-  <!-- CTA -->
+  <!-- ================= FINAL CTA ================= -->
   <section class="cta">
     <h2>Enroll & Be Equipped</h2>
     <p>
@@ -340,38 +200,46 @@
       or deeper spiritual authority, Atone Bible School is a place
       where your calling will be sharpened and released.
     </p>
-    <a href="https://wa.me/233244491177">Apply via WhatsApp</a>
+
+    <a href="https://wa.me/233244491177" class="btn">Apply via WhatsApp</a>
   </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Atone Chapel. All Rights Reserved.</p>
   <p>Raising leaders of power, excellence, and kingdom impact.</p>
 </footer>
+
+<!-- ================= SCRIPT ================= -->
 <script>
-function sendToWhatsApp(e) {
-  e.preventDefault();
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
 
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const email = document.getElementById("email").value;
-  const calling = document.getElementById("calling").value;
-  const testimony = document.getElementById("testimony").value;
+  function sendToWhatsApp(e) {
+    e.preventDefault();
 
-  const message =
-    `BIBLE SCHOOL APPLICATION%0A%0A` +
-    `Name: ${name}%0A` +
-    `Phone: ${phone}%0A` +
-    `Email: ${email}%0A` +
-    `Calling: ${calling}%0A%0A` +
-    `Testimony:%0A${testimony}`;
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const calling = document.getElementById("calling").value;
+    const testimony = document.getElementById("testimony").value;
 
-  window.open(
-    `https://wa.me/233244491177?text=${message}`,
-    "_blank"
-  );
-}
+    const message =
+      `BIBLE SCHOOL APPLICATION%0A%0A` +
+      `Name: ${name}%0A` +
+      `Phone: ${phone}%0A` +
+      `Email: ${email}%0A` +
+      `Calling: ${calling}%0A%0A` +
+      `Testimony:%0A${testimony}`;
+
+    window.open(
+      `https://wa.me/233244491177?text=${message}`,
+      "_blank"
+    );
+  }
 </script>
 
 </body>

@@ -8,251 +8,153 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f7f7f9;
-      color: #1e293b;
-      margin: 0;
-    }
-
-    header {
-      background: linear-gradient(rgba(10,31,58,.85), rgba(10,31,58,.92)),
-                  url('banner.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 140px 20px 100px;
-      color: #fff;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      color: #e8c97f;
-      font-size: 3.5rem;
-      margin-bottom: 12px;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      opacity: .95;
-    }
-
-    nav {
-      background: #0a1f3a;
-      padding: 16px 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #e8c97f;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px;
-    }
-
-    .give-intro {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 60px;
-    }
-
-    .give-intro h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      margin-bottom: 16px;
-    }
-
-    .give-intro p {
-      font-size: 1.15rem;
-      color: #475569;
-    }
-
-    .verse {
-      background: #fff;
-      padding: 40px;
-      border-left: 6px solid #c9a23f;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-      font-style: italic;
-      margin-bottom: 70px;
-    }
-
-    .verse cite {
-      display: block;
-      margin-top: 16px;
-      font-style: normal;
-      font-weight: 500;
-      color: #334155;
-    }
-
-    .give-btn {
-      display: inline-block;
-      background: #c9a23f;
-      color: #0a1f3a;
-      padding: 16px 50px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 1.15rem;
-      text-decoration: none;
-      box-shadow: 0 10px 30px rgba(201,162,63,.4);
-      transition: all .3s ease;
-    }
-
-    .give-btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(201,162,63,.5);
-    }
-
-    .giving-options {
-      margin-top: 90px;
-    }
-
-    .options-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-    }
-
-    .option {
-      background: #fff;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.07);
-      text-align: center;
-    }
-
-    .option h3 {
-      font-size: 1.4rem;
-      margin-bottom: 14px;
-      color: #0a1f3a;
-    }
-
-    .option p {
-      color: #475569;
-      font-size: 1.05rem;
-    }
-
-    .thank-you {
-      margin-top: 60px;
-      text-align: center;
-      font-size: 1.15rem;
-      color: #334155;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    footer {
-      background: #0a0f1a;
-      color: #94a3b8;
-      text-align: center;
-      padding: 60px 20px;
-      margin-top: 100px;
-    }
-  </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-  <img src="logo.jpg" alt="Atone Chapel Logo" class="logo" style="width:90px;margin-bottom:20px;">
-  <h1>Give & Partner With Us</h1>
-  <p>Sow into God’s work • Advance the Kingdom • Transform Lives</p>
+
+  <!-- NAVBAR INSIDE BANNER -->
+  <nav class="navbar">
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="live.html">Live</a>
+      <a href="preachme/index.html">🔥 PreachMe AI</a>
+      <a href="bibleschool.html">Bible School</a>
+      <a href="give.html">Give</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+  </nav>
+
+  <div class="hero-content">
+
+    <!-- CLICKABLE LOGO -->
+    <a href="index.html" title="Return to Homepage">
+      <img src="assets/logo.jpg" alt="Atone Chapel Logo" class="logo">
+    </a>
+
+    <h1>Give & Partner With Us</h1>
+    <p>Sow into God's work • Advance the Kingdom • Transform Lives</p>
+
+  </div>
+
 </header>
 
-<nav class="navbar">
-  </div>
-</section>
-
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="live.html">Live</a>
-    <a href="bibleschool.html">Bible School</a>
-    <a href="#about">About us </a>
-    <a href="give.html">Give</a>
-  </div>
-</nav>
 
 <main>
 
-  <section class="give-intro">
-    <h2>Partner in Kingdom Advancement</h2>
+  <!-- ================= INTRO ================= -->
+  <section class="event-card" style="text-align:center;">
+    <h3>Partner in Kingdom Advancement</h3>
     <p>
-      Your generosity fuels prayer, evangelism, discipleship, and the propagation
-      of the gospel through Atone Chapel.
+      Your giving strengthens prayer, evangelism, discipleship, prophetic ministry,
+      and the spreading of the gospel through Atone Chapel.
     </p>
   </section>
 
-  <div class="verse">
-    “Give, and it will be given to you. Good measure, pressed down, shaken together,
-    running over, will be put into your lap.”
-    <cite>— Luke 6:38 (ESV)</cite>
-  </div>
 
-  <div style="text-align:center; margin-bottom:80px;">
-    <a href="https://www.sendwave.com/en/countries/ghana" class="give-btn">
-      Give via MoMo or Bank
+  <!-- ================= VERSE ================= -->
+  <section class="event-card" style="margin-top:50px;">
+    <h3>Scripture for Giving</h3>
+    <p style="font-style: italic;">
+      “Give, and it will be given to you. Good measure, pressed down, shaken together,
+      running over, will be put into your lap.”
+    </p>
+    <p style="margin-top:12px; font-weight:800; color:rgba(10,31,58,0.9);">
+      — Luke 6:38 (ESV)
+    </p>
+  </section>
+
+
+  <!-- ================= GIVE BUTTON ================= -->
+  <section style="text-align:center; padding:60px 0 20px;">
+    <a href="https://wa.me/233244491177?text=Hello%20Prophet%20Joseph%20Adarkwah%2C%20I%20want%20to%20partner%20and%20give%20to%20Atone%20Chapel."
+       class="btn"
+       target="_blank">
+       💛 Give / Partner via WhatsApp
     </a>
-  </div>
+  </section>
 
+
+  <!-- ================= GIVING OPTIONS ================= -->
   <section class="giving-options">
-    <div class="options-grid">
 
-      <div class="option">
-        <h3>Mobile Money (Ghana)</h3>
+    <h2>Giving Options</h2>
+    <div class="divider"></div>
+
+    <div class="features">
+
+      <div class="feature-card">
+        <h3>📱 Mobile Money (Ghana)</h3>
         <p>
           <strong>MTN MoMo:</strong><br>
-          +233 244 491 177<br>
-          Name: Joseph Adarkwah
+          +233 244 491 177<br><br>
+          <strong>Name:</strong><br>
+          Prophet Joseph Adarkwah
         </p>
       </div>
 
-      <div class="option">
-        <h3>Bank Transfer</h3>
+      <div class="feature-card">
+        <h3>🏦 Bank Transfer</h3>
         <p>
-          Kindly contact us via WhatsApp for secure bank details.
+          For secure bank details, kindly contact us directly via WhatsApp
+          and our team will assist you immediately.
         </p>
       </div>
 
-      <div class="option">
-        <h3>In-Person Offering</h3>
+      <div class="feature-card">
+        <h3>🏛 In-Person Offering</h3>
         <p>
-          Give during any service at<br>
+          You can give during any service at Atone Chapel.<br><br>
+          <strong>Location:</strong><br>
           Shalom Estate, Potsin.
         </p>
       </div>
 
     </div>
 
-    <p class="thank-you">
+  </section>
+
+
+  <!-- ================= THANK YOU ================= -->
+  <section class="cta" style="margin-top:70px;">
+    <h2>Thank You for Your Seed</h2>
+    <p>
       Every seed sown is a partnership in souls saved, destinies restored,
-      and God’s kingdom advancing.  
-      <strong>Thank you for giving.</strong>
+      and kingdom advancement. Your giving is not forgotten before God.
+      <br><br>
+      <strong>May the Lord multiply your harvest in Jesus' name.</strong>
     </p>
   </section>
 
 </main>
 
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/message/EL3CNAPH7ZWFA1" class="whatsapp-float" target="_blank">
+  WhatsApp
+</a>
+
+
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Atone Chapel. All Rights Reserved.</p>
   <p>A covenant altar of atonement, redemption, and divine encounter.</p>
-  <p>Contact: +233 244 491 177</p>
+  <p><strong>Contact:</strong> +233 244 491 177</p>
 </footer>
+
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
 
 </body>
 </html>
-

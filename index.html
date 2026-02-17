@@ -16,82 +16,103 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= HEADER (WITH NAV INSIDE BANNER) ================= -->
 <header>
-  <img src="logo.jpg" alt="Atone Chapel Logo" class="logo">
-  <h1>Atone Chapel</h1>
-  <p>A Covenant Altar of Power, Atonement & Prophetic Authority</p>
+
+  <!-- ================= NAVBAR INSIDE HEADER ================= -->
+  <nav class="navbar">
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="live.html">Live</a>
+
+      <!-- PREACHME MUST BE THIRD -->
+      <a href="preachme/index.html">🔥 PreachMe AI</a>
+
+      <a href="bibleschool.html">Bible School</a>
+      <a href="give.html">Give</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+  </nav>
+
+  <!-- ================= HERO CONTENT ================= -->
+  <div class="hero-content">
+    <img src="assets/logo.jpg" alt="Atone Chapel Logo" class="logo">
+    <h1>Atone Chapel</h1>
+    <p>A Covenant Altar of Power, Atonement & Prophetic Authority</p>
+  </div>
+
 </header>
 
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  </div>
-</section>
-
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="#">Home</a>
-    <a href="live.html">Live</a>
-    <a href="bibleschool.html">Bible School</a>
-    <a href="give.html">Give</a> 
-    <a href="about.html">About Us </a>
-  </div>
-</nav>
-
 <main>
 
-<section 
-id="live" class="live-section">
-  <h2>Live Prophetic Session </h2>
+<!-- ================= LIVE SECTION ================= -->
+<section id="live" class="live-section">
+  <h2>Live Prophetic Session</h2>
   <div class="divider"></div>
 
- <!-- LIVE STATUS -->
-<p id="liveStatus" class="live-note">
-  🔴 LIVE NOW -Join Prophet Joseph Adarkwah
-</p>
+  <p id="liveStatus" class="live-note">
+    🔴 LIVE NOW - Join Prophet Joseph Adarkwah
+  </p>
 
-<!-- LIVE VIDEO CONTAINER -->
-<div id="liveContainer" class="live-video-wrapper dark-live">
-  <div class="video-responsive">
-
-    <!-- FACEBOOK LIVE -->
-    <iframe
-      src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/prophetjosephAdarkwah1/videos/1550964969399205/&show_text=false"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-      allowfullscreen
-      loading="lazy"
-      title="Atone Chapel Live">
-    </iframe>
-
-  </div>
-</div>
-
+  <div id="liveContainer" class="live-video-wrapper dark-live">
+    <div class="video-responsive">
+      <iframe
+        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/prophetjosephAdarkwah1/videos/1550964969399205/&show_text=false"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        title="Atone Chapel Live">
+      </iframe>
+    </div>
   </div>
 
-  <!-- OFFLINE MESSAGE -->
   <div id="offlineMessage" class="offline-box">
     <p>⏳ We are currently offline</p>
     <p>Next live prayer starts in:</p>
     <h3 id="countdownTimer">Loading…</h3>
-<a id="whatsappAlert"
-   href="https://wa.me/233244491177?text=🔴%20We%20are%20LIVE%20now%20at%20Atone%20Chapel!%20Join%20us%20here:%20https://web.facebook.com/share/v/1GsiuRhbtu/"
-   target="_blank"
-   class="btn"
-   style="display:none; margin-top:20px;">
-   Notify Others on WhatsApp
-</a>
+
+    <a id="whatsappAlert"
+      href="https://wa.me/233244491177?text=🔴%20We%20are%20LIVE%20now%20at%20Atone%20Chapel!%20Join%20us%20here:%20https://web.facebook.com/share/v/1GsiuRhbtu/"
+      target="_blank"
+      class="btn"
+      style="display:none; margin-top:20px;">
+      Notify Others on WhatsApp
+    </a>
   </div>
 
-  <!-- FACEBOOK COMMENTS -->
-  <div id="fb-comments" class="comments-box">
-    <div class="fb-comments"
-      data-href="https://web.facebook.com/share/v/1GsiuRhbtu/"
-      data-width="100%"
-      data-numposts="5">
-    </div>
+</section>
+
+
+<!-- ================= RADIO + PREACHME SIDE BY SIDE ================= -->
+<section class="radio-preachme-section">
+
+  <!-- RADIO -->
+  <div class="radio-box">
+    <h2>Atone FM Radio</h2>
+    <div class="divider"></div>
+
+    <iframe src="https://zeno.fm/player/atone-fm" loading="lazy"></iframe>
+  </div>
+
+  <!-- PREACHME -->
+  <div class="preachme-box">
+    <h2>PreachMe AI</h2>
+    <div class="divider"></div>
+
+    <a href="preachme/index.html" title="Open PreachMe AI">
+      <img src="assets/preach.png" alt="PreachMe AI Sermon Generator">
+    </a>
+
+    <p class="preachme-caption">
+      🔥 Click to Open PreachMe AI Sermon Generator
+    </p>
   </div>
 
 </section>
@@ -105,28 +126,62 @@ id="live" class="live-section">
   <p><strong>Time:</strong> 6:30 PM – 8:30 PM Daily</p>
 </section>
 
-<!-- ================= DAILY ARICLE ================= -->
+
+<!-- ================= DAILY ARTICLE ================= -->
 <section class="event-card">
-  <h3>DAILY ARTICLE</h3>
-  <p><strong>POWER AND THE BLOOD</p>
-  <p></strong> UNDERSTANDING THE POWER OF GOD is understanding reality of life</p>
-</section>
-<!-- Radio under Menu -->
-<section class="radio-under-menu">
-  <div class="radio-box">
-    <h2>Atone FM Radio</h2>
-    <div class="divider"></div>
-    <div class="radio-wrapper">
-      <iframe src="https://zeno.fm/player/atone-fm" loading="lazy"></iframe>
-    </div>
+  <h3>Daily Article</h3>
+  <p><strong>POWER AND THE BLOOD</strong></p>
+  <p>Understanding the power of God is understanding the reality of life.</p>
 </section>
 
-<!-- ================= ABOUT Us================= -->
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="divider"></div>
+
+    <p>Moments, services, and highlights from our ministry</p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="assets/gallery1.jpg" alt="Church Service">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/gallery2.jpg" alt="Prayer Session">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/gallery3.jpg" alt="Worship Moment">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/gallery4.jpg" alt="Prophetic Service">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/gallery5.jpg" alt="Church Members">
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/gallery6.jpg" alt="Special Program">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
 <section id="about">
   <h2>About Us</h2>
   <div class="divider"></div>
 
   <div class="features">
+
     <div class="feature-card">
       <h3>Our Vision</h3>
       <p>To establish a covenant altar where believers walk in dominion.</p>
@@ -141,6 +196,7 @@ id="live" class="live-section">
       <h3>Our Leader</h3>
       <p><strong>Prophet Joseph Adarkwah</strong> — a ministry of power and accuracy.</p>
     </div>
+
   </div>
 </section>
 
@@ -149,23 +205,30 @@ id="live" class="live-section">
 <section class="cta">
   <h2>Join Daily Prayer</h2>
   <p>4:00 AM — Ghana Time</p>
- 
+</section>
+
 </main>
 
-   <a href="https://wa.me/message/EL3CNAPH7ZWFA1" class="whatsapp-float" target="_blank">
-        WhatsApp
-    </a>>
 
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/message/EL3CNAPH7ZWFA1" class="whatsapp-float" target="_blank">
+  WhatsApp
+</a>
+
+
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Atone Chapel. All Rights Reserved.</p>
 </footer>
 
+
+<!-- ================= SCRIPTS ================= -->
 <script src="script.js"></script>
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
   src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
 </script>
+
 </body>
 </html>
-
-
